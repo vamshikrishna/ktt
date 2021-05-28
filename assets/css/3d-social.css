@@ -1,0 +1,179 @@
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --grey: #D3D3D3;
+    --youtube: #FF0000;
+    --telegram: #0088CC;
+    --whatsapp: #25D366;
+}
+
+.home-3d-social {
+    /* position: absolute;
+    bottom: -90%;
+    left: 0%; */
+    /* display: flex;
+    justify-content: space-around;
+    align-items: flex-end; */
+}
+
+.home-3d-social h3 {
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+    color: var(--white);
+
+}
+
+/* grid adjustments */
+
+
+.title {
+    grid-area: title;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-text {
+    color: #fff;
+}
+
+.yt {
+    grid-area: youtube;
+}
+
+.tg {
+    grid-area: telegram;
+}
+
+.wa {
+    grid-area: whatsapp;
+}
+
+.home-3d-social ul {
+    display: grid;
+    grid-template-areas:
+        'title title title title title title'
+        'youtube youtube telegram telegram whatsapp whatsapp';
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+.home-3d-social ul {
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    margin: 0;
+    padding: 0;
+    display: flex; */
+
+    /* flex-wrap: wrap; */
+    /* margin-top: 20px; */
+    width: 100%;
+    height: 100%;
+    /* display: flex; */
+
+}
+
+.home-3d-social ul li {
+    list-style-type: none;
+    margin: 0 20px;
+}
+
+.home-3d-social ul li a .fab {
+    font-size: 18px;
+    color: var(--white);
+    line-height: 30px;
+    transition: 0.5s;
+}
+
+/* line height should be same as (.home-3d-social ul li a) width and height to make icon center */
+
+.home-3d-social .fa-youtube{
+    color: var(--youtube);
+}
+.home-3d-social .fa-telegram-plane {
+    color: var(--telegram);
+}
+.home-3d-social .fa-whatsapp {
+    color: var(--whatsapp);
+}
+
+.home-3d-social ul li a {
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    background-color: #808080;
+    transform: perspective(1000px) rotate(-30deg) skew(24deg) translate(0,0);
+    transition: 0.5s;
+    box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5);
+}
+
+.home-3d-social ul li a::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: -10px;
+    height: 100%;
+    width: 10px;
+    background-color: #93A092;
+    transition: 0.5s;
+    transform: rotate(0deg) skewY(-45deg);
+}
+
+.home-3d-social ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: -5px;
+    height: 10px;
+    width: 100%;
+    background-color: var(--grey);
+    transition: 0.5s;
+    transform: rotate(0deg) skewX(-45deg);
+}
+
+.home-3d-social ul li a:hover {
+    transform: perspective(1000px) rotate(-30deg) skew(24deg) translate(10px, -10px);
+    box-shadow: -50px 50px 30px rgba(0, 0, 0, 0.5);
+}
+
+.home-3d-social ul li:hover .fab {color: var(--white)}
+
+
+.home-3d-social ul li:nth-child(2) a {background-color: var(--youtube)}
+.home-3d-social ul li:nth-child(3) a {background-color: var(--telegram)}
+.home-3d-social ul li:nth-child(4) a {background-color: var(--whatsapp)}
+
+
+.home-3d-social ul li:nth-child(2) a {background-color: var(--youtube)}
+
+.home-3d-social ul li:nth-child(2) a::before {background-color: #e90000}
+
+.home-3d-social ul li:nth-child(2) a::after {background-color: #fa4242}
+
+.home-3d-social ul li:nth-child(3) a {background-color: var(--telegram)}
+
+.home-3d-social ul li:nth-child(3) a::before {background-color: #037cb8}
+
+.home-3d-social ul li:nth-child(3) a::after {background-color: #12a6f0}
+
+.home-3d-social ul li:nth-child(4) a {background-color: var(--whatsapp)}
+
+.home-3d-social ul li:nth-child(4) a::before {background-color: #12b64e}
+
+.home-3d-social ul li:nth-child(4) a::after {background-color: #27df6a}
+
+@media (max-width: 768px) {
+    .home-3d-social {
+        margin-top: 40px;
+        margin-bottom: -0px;
+        width: 100%;
+        height: 100%;
+    }
+}
