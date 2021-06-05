@@ -29,17 +29,16 @@
   margin: 0;
   padding: 0;
   outline: none !important;
+  /* box-sizing: border-box; */
 }
 
-::-webkit-scrollbar {
+::-webkit-scrollbar,
+::-webkit-scrollbar-track {
   width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  width: 10px;
   background-color: #dddddd;
-  border-left: 0 solid white;
-  border-right: 0 solid white;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -83,6 +82,11 @@ ul {
   list-style: none;
 }
 
+.btn-1,
+.counter-box .count::after {
+  transition: all 0.5s ease;
+}
+
 .btn-1 {
   background-color: #ffffff;
   padding: 12px 30px;
@@ -91,7 +95,6 @@ ul {
   color: var(--main-color);
   font-size: 16px;
   text-transform: capitalize;
-  transition: all 0.5s ease;
   box-shadow: var(--shadow-black-300);
   font-weight: 500;
 }
@@ -562,65 +565,96 @@ ul {
     transform-origin: 170px 170px;
     animation: spin_01 10s linear infinite;
   } */
-  
-  /* Counter Section Start */
-  #counter {
-    width: 100%;
-    background: linear-gradient(180deg, var(--bg-dark) 50%, #fff 50%);
-    /* background-color: #000; */
-    display: flex;
-    justify-content: center;
-    padding: 3rem 0;
-    text-align: center;
-  }
-  
-  #counter .counter-box {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 0 2rem;
-    /* padding-bottom: 100px; */
-    /* background: #f4f4f4; */
-    background: linear-gradient(to right, var(--main-color), rgb(139, 17, 238));
-    border-radius: 1rem;
-    box-shadow: 0 0.5rem 1rem rgba(51, 51, 51, 0.3);
-  }
-  
-  .counter-box .count {
-    text-align: center;
-    margin: 2rem 3.5rem;
-    /* margin: 20px; */
-    height: 170px;
-    width: 230px;
-    position: relative;
-    z-index: 1;
-  }
-  
-  .counter-box .count::before,
-  .counter-box .count::after {
-    content: "";
-    position: absolute;
-    top: 20px;
-    bottom: 20px;
-    right: 0;
-    left: 0;
-    z-index: -1;
-    clip-path: polygon(13% 0%, 87% 0%, 100% 50%, 87% 100%, 13% 100%, 0% 50%);
-    background-color: #2980b9;
-  }
-  
-  .counter-box .count::after {
-    top: 0px;
-    bottom: 0px;
-    right: 10px;
-    left: 10px;
-    z-index: -1;
-    clip-path: polygon(20% 0%, 80% 0%, 100% 50%, 80% 100%, 20% 100%, 0% 50%);
-    background-color: #fff;
-  }
-  
-  .counter-box .count i {
-    color: var(--bg-dark);
+
+/* Kubera Moto Start */
+.kubera-moto .kubera-moto-content p {
+  color: var(--black-900);
+}
+
+/* Kubera Moto End */
+
+/* Who We Are Start */
+.who-we-are .who-we-are-content p {
+  color: var(--black-900);
+}
+
+/* Who We Are End */
+
+/* Counter Section Start */
+#counter {
+  width: 100%;
+  background: linear-gradient(180deg, var(--bg-dark) 50%, #fff 50%);
+  /* background-color: #000; */
+  display: flex;
+  justify-content: center;
+  padding: 3rem 0;
+  text-align: center;
+}
+
+#counter .counter-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 1rem;
+  /* margin: 0 2rem; */
+  /* padding-bottom: 100px; */
+  /* background: #f4f4f4; */
+  background: linear-gradient(to right, var(--main-color), rgb(139, 17, 238));
+  border-radius: 1rem;
+  /* box-shadow: 0 0.5rem 1rem rgba(51, 51, 51, 0.3); */
+  /* box-shadow: var(--shadow-black-300); */
+  box-shadow: var(--shadow-black-300);
+}
+
+.counter-box ul li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+.counter-box .count {
+  text-align: center;
+  margin: 2rem;
+  /* margin: 20px; */
+  height: 170px;
+  width: 230px;
+  position: relative;
+  z-index: 1;
+}
+
+.counter-box .count::before,
+.counter-box .count::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  bottom: 20px;
+  right: 0;
+  left: 0;
+  z-index: -1;
+  clip-path: polygon(13% 0%, 87% 0%, 100% 50%, 87% 100%, 13% 100%, 0% 50%);
+  background-color: #2980b9;
+}
+
+.counter-box .count::after {
+  top: 0px;
+  bottom: 0px;
+  right: 10px;
+  left: 10px;
+  z-index: -1;
+  clip-path: polygon(20% 0%, 80% 0%, 100% 50%, 80% 100%, 20% 100%, 0% 50%);
+  background-color: #f4f4f4;
+}
+
+.counter-box .count:hover::after {
+  transform: rotate(90deg);
+  /* background-color: rgba(244, 244, 244, 0); */
+  opacity: 0.9;
+}
+
+
+/* Add Blur Shine effect as seen in youtube video contact page designed channel I think */
+
+.counter-box .count i {
+  color: var(--bg-dark);
   font-size: 40px;
   padding: 24px 0;
 }
@@ -646,7 +680,7 @@ ul {
 }
 
 .counter-box .count:nth-child(2) .counter-title {
-  color: #16a085;
+  color: #f39c12;
 }
 
 .counter-box .count:nth-child(3)::before {
@@ -666,6 +700,7 @@ ul {
 }
 
 /* .counter-box .count .counter-title {font-size: 0.85rem;} */
+/* .counter-box .count .counter-title {font-size: 1rem;} */
 
 /* Counter Section End */
 
@@ -1412,6 +1447,46 @@ ul {
 }
 
 /*------ MEDIA QUERIES!!! (Responsive) ------*/
+@media (max-width: 1030px) {
+  #counter {
+    padding: 2rem 0;
+  }
+
+  .counter-box .count {
+    margin: 24px;
+    height: 85px;
+    width: 115px;
+  }
+
+  .counter-box .count::before,
+  .counter-box .count::after {
+    top: 10px;
+    bottom: 10px;
+  }
+
+  .counter-box .count::after {
+    top: 0px;
+    bottom: 0px;
+    right: 5px;
+    left: 5px;
+  }
+
+  .counter-box .count i {
+    font-size: 1.5rem;
+    padding: 8px 0 6px 0;
+  }
+
+  .count .counter-title {
+    font-size: 0.8rem;
+    margin-bottom: 0px;
+  }
+
+  .counter-box .count .number {
+    font-size: 0.8rem;
+  }
+  /* .counter-box .count .number span {font-size: 1rem} */
+}
+
 @media (max-width: 991px) {
   .navbar-toggler {
     background-color: var(--dark-to-main-color);
@@ -1473,7 +1548,7 @@ ul {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 770px) {
   .home-text {
     margin-bottom: 80px;
   }
@@ -1482,6 +1557,11 @@ ul {
   .arrow-custom {
     margin-top: 50px;
     margin-bottom: 150px;
+  }
+
+  .counter-box .count {
+    /* margin: 1rem; */
+    margin: 20px;
   }
 
   .fun-facts-img {

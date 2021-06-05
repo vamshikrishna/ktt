@@ -1,16 +1,24 @@
-$(window).on("load", function () {
+$(window).on("load", () => {
   // Preloader
   $(".preloader").fadeOut("slow");
 });
 
-$(document).ready(function () {
+$(document).ready(() => {
   // navbar Shrink
-  $(window).on("scroll", function () {
+  $(window).on("scroll", () => {
     if ($(this).scrollTop() > 90) {
       $(".navbar").addClass("navbar-shrink");
     } else {
       $(".navbar").removeClass("navbar-shrink");
     }
+
+    // // Counter up call
+    // let scroll = window.scrollY;
+    // let element_position_by_number = $(".counter-trigger").offset().top;
+    // // also you can get element position by offset method like this => $("element").offset().top
+    // if (scroll >= element_position_by_number) {
+    //   runCounter();
+    // }
   });
 
   // Contact Form Popup
@@ -130,8 +138,9 @@ $(document).ready(function () {
   // Custom Styling Contact Form
 
   // Video Popup
+  // Make this Popup to load after clicking otherwise entire webiste is waiting at preloader
   const videoSrc = $("#player-1").attr("src");
-  $(".video-play-btn-js, .video-popup").on("click", function () {
+  $(".video-play-btn-js, .video-popup").on("click", () => {
     if ($(".video-popup").hasClass("open")) {
       $(".video-popup").removeClass("open");
       $("#player-1").attr("src", "");
@@ -165,19 +174,82 @@ $(document).ready(function () {
       .resize(); //trigger resize on page load
   });
 
-  // Counter Section
-  $('.number').each(function () {
 
-    $(this).prop('Counter', 0).animate({
-      Counter: $(this).text()
-        },{
-        duration: 3500,
-        easing: 'swing',
-        step: function (now) {
-          $(this).text(Math.ceil(now) + "+");
+  // Counter Up on Visible Scroll
+  $(function ($, win) {
+    $.fn.inViewport = function (cb) {
+      return this.each(function (i, el) {
+        function visPx() {
+          var H = $(this).height(),
+            r = el.getBoundingClientRect(), t = r.top, b = r.bottom;
+          return cb.call(el, Math.max(0, t > 0 ? H - t : (b < H ? b : H)));
+        } visPx();
+        $(win).on("resize scroll", visPx);
+      });
+    };
+  }(jQuery, window));
+
+
+  jQuery(function ($) { // DOM ready and $ in scope
+
+    $(".number").inViewport(function (px) { // Make use of the `px` argument!!!
+      // if element entered V.port ( px>0 ) and
+      // if prop initNumAnim flag is not yet set
+      //  = Animate numbers
+      const This = $(this);
+      const counterValue = document.querySelector(".counter-value");
+      if (px > 0 && !this.initNumAnim) {
+        this.initNumAnim = true; // Set flag to true to prevent re-running the same animation
+        $(this).prop('Counter', 0).animate({
+          Counter: $(this).text()
+        }, {
+          duration: 3500,
+          easing: 'swing',
+          step: function (now) {
+            $(this).text(Math.ceil(now) + "+");
+          },
+          complete: () => {
+            // This.text(this.counterValue).css({ color: "#0048ad" });
+            This.text(this.counterValue).css({
+              fontWeight: "bolder",
+              transition: "all 0.5s ease",
+              // fontSize: "1.4rem"
+            });
+          }
+        });
       }
-    })
+    });
   });
+
+  // function runCounter() {
+  //   $('.number').each(function () {
+  //     const This = $(this);
+  //     const counterValue = document.querySelector(".counter-value");
+  //     $(this).prop('Counter', 0).animate({ Counter: $(this).text() },
+  //       {
+  //         duration: 3500,
+  //         easing: 'swing',
+  //         step: function (now) {
+  //           $(this).text(Math.floor(now) + "+");
+  //         },
+  //         complete: () => {
+  //           // This.text(this.counterValue).css({ color: "#0048ad" });
+  //           This.text(this.counterValue).css({
+  //             color: "#0048ad",
+  //             transition: "all 0.5s ease",
+  //             // fontSize: "2.3rem"
+  //           });
+  //           if (now == NaN) {
+  //             // now.preventDefault;
+  //             // Dont know how, but counter up is working without giving NaN as result after adding a simple empty if statement
+  //           }
+  //         }
+  //       }
+  //     )
+  //   })
+  // } // end runCounter
+
+
 
   // Features Carousel
   $(".features-carousel").owlCarousel({
@@ -261,7 +333,7 @@ $(document).ready(function () {
   });
 
   // Navbar Collapse
-  $(".nav-link").on("click", function () {
+  $(".nav-link").on("click", () => {
     $(".navbar-collapse").collapse("hide");
   });
 
@@ -278,7 +350,7 @@ $(document).ready(function () {
   }
   toggleTheme();
 
-  $(".toggle-theme").on("click", function () {
+  $(".toggle-theme").on("click", () => {
     $("body").toggleClass("dark");
 
     if ($("body").hasClass("dark")) {
@@ -307,10 +379,10 @@ $(document).ready(function () {
   //     alert("Vamshi Krishna");
 
   // });
-});
+}); // end jquery
 
-// function newFunction() {
-//      //Set a same-site cookie for first-party contexts
+  // function newFunction() {
+    //      //Set a same-site cookie for first-party contexts
 //      document.cookie = 'cookie1=videoSrc; SameSite=Lax';
 //      //Set a cross-site cookie for third-party contexts
 //      document.cookie = 'cookie2=videoSrc; SameSite=None; Secure';
