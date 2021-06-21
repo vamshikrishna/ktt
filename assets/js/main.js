@@ -6,10 +6,12 @@ $(window).on("load", () => {
 $(document).ready(() => {
   // navbar Shrink
   $(window).on("scroll", () => {
-    if ($(this).scrollTop() > 90) {
+    if ($(this).scrollTop() > 60) {
       $(".navbar").addClass("navbar-shrink");
+      $(".navbar").removeClass("padding");
     } else {
       $(".navbar").removeClass("navbar-shrink");
+      $(".navbar").addClass("padding");
     }
 
     // // Counter up call
@@ -20,6 +22,28 @@ $(document).ready(() => {
     //   runCounter();
     // }
   });
+
+  // const paddingMediaQuery = window.matchMedia("(max-width: 575px)");
+  // if (paddingMediaQuery.matches) {
+  //   $(".navbar").removeClass("padding");
+  //   alert("vk");
+  // }
+
+  // topbarHeader = document.getElementById('header-topbar');
+  // function myFunction(topBar) {
+  //   if (topBar.matches) { // If media query matches
+  //     document.topbarHeader.style.display = "none";
+  //   } else {
+  //    document.topbarHeader.style.display = "flex";
+  //   }
+  // }
+
+  // var topBar = window.matchMedia("(max-width: 700px)")
+  // myFunction(topBar) // Call listener function at run time
+  // topBar.addEventListener(myFunction) // Attach listener function on state changes
+
+
+
 
   // Contact Form Popup
   const modal = document.getElementById("email-modal");
@@ -206,13 +230,13 @@ $(document).ready(() => {
           duration: 3500,
           easing: 'swing',
           step: function (now) {
-            $(this).text(Math.ceil(now) + "+");
+            $(this).text(Math.ceil(now));
           },
           complete: () => {
             // This.text(this.counterValue).css({ color: "#0048ad" });
             This.text(this.counterValue).css({
+              // transition: "font-weight 0.5s ease",
               fontWeight: "bolder",
-              transition: "all 0.5s ease",
               // fontSize: "1.4rem"
             });
           }
@@ -256,7 +280,9 @@ $(document).ready(() => {
     loop: true,
     margin: 0,
     autoplay: true,
+    // autoplayHoverPause:true,
     responsiveClass: true,
+    // autoHeight: false,
     responsive: {
       0: {
         items: 1,
@@ -274,7 +300,9 @@ $(document).ready(() => {
   $(".screenshots-carousel").owlCarousel({
     loop: true,
     margin: 0,
+    nav: true,
     autoplay: true,
+    // autoplayHoverPause:true,
     responsiveClass: true,
     responsive: {
       0: {
@@ -294,6 +322,7 @@ $(document).ready(() => {
     loop: true,
     margin: 0,
     autoplay: true,
+    // autoplayHoverPause:true,
     responsiveClass: true,
     responsive: {
       0: {
@@ -313,6 +342,7 @@ $(document).ready(() => {
     loop: true,
     margin: 0,
     autoplay: true,
+    // autoplayHoverPause:true,
     responsiveClass: true,
     responsive: {
       0: {

@@ -5,7 +5,9 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+  <meta author="Vamshi Krishna">
+  <!-- Add Meta Keywords -->
+  <!-- Add SEO Optimization -->
   <link rel="stylesheet" href="./assets/css/owl.carousel.min.css" />
   <link rel="stylesheet" href="./assets/css/fontawesome.all.min.css" />
   <!-- <link rel="stylesheet" href="./assets/css/fontawesome.min.css"> -->
@@ -22,6 +24,29 @@
   </div>
   <!-- Preloader End -->
 
+  <!-- Header topbar Start -->
+  <header class="header-topbar">
+    <div class="container">
+      <div class="wrapper-topbar">
+        <div class="social-icons">
+          <i class="fab fa-youtube"></i>
+          <i class="fab fa-telegram-plane"></i>
+          <i class="fab fa-whatsapp"></i>
+        </div>
+        <div class="contact-topbar">
+          <div>
+            <a href="tel:987654321"><i class="fas fa-phone-alt"></i>987654321</a>
+          </div>
+          <span class="divider">|</span>
+          <div>
+            <a href="mailto:kuberatrader@gmail.com"><i class="far fa-envelope"></i>kuberatrader@gmail.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Header topbar End -->
+
   <!-- navbar start -->
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
@@ -29,7 +54,6 @@
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
         <i class="fas fa-bars"></i>
       </button>
-
       <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
@@ -41,7 +65,11 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" data-scroll-nav="2" href="#">Screenshots</a>
+            <a class="nav-link" data-scroll-nav="2" href="#">About Us</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" data-scroll-nav="3" href="#">Screenshots</a>
           </li>
 
           <li class="nav-item">
@@ -107,7 +135,7 @@
         <div class="col-md-5 text-center">
           <div class="home-img">
             <!-- <div class="circle"></div> -->
-            <img src="./assets/image/svg/predictive_analytics.svg" alt="SVG Chart" />
+            <img class="img-fluid" src="./assets/image/svg/predictive_analytics.svg" alt="SVG Chart" />
           </div>
         </div>
 
@@ -174,12 +202,12 @@
   <!-- Showcase Hero Section End -->
 
   <!-- Kubera Moto Section Start -->
-  <section class="kubera-moto section-padding" id="kubera-moto">
+  <section class="kubera-moto section-padding" id="kubera-moto" data-scroll-index="1">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-8">
           <div class="section-title">
-            <h2><span>Kubera</span> Moto</h2>
+            <h2><span>Kubera</span> Motto</h2>
           </div>
         </div>
       </div>
@@ -193,18 +221,91 @@
             </p>
             <p>
               We will not Compromise on delivering premium material to the best
-              of our abilities
+              of our abilities.
             </p>
           </div>
+          <!-- <hr class="custom-hr"> -->
         </div>
       </div>
+
+      <section class="features" id="features">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <div class="section-title-inner">
+                <h2>Awesome <span>features</span></h2>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="owl-carousel features-carousel">
+              <div class="feature-item">
+                <div class="feature-box">
+                  <div class="icon">
+                    <i class="fas fa-chart-area"></i>
+                  </div>
+                  <h3>Analysis</h3>
+                  <p>
+                    Pure Technical Analysis based positions taken avoiding risk factor.
+                  </p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-box">
+                  <div class="icon">
+                    <!-- <i class="fas fa-stopwatch"></i> -->
+                    <i class="fas fa-stopwatch"></i>
+                  </div>
+                  <h3>Time Management</h3>
+                  <p>
+                    Eagle Eye on the market behaviour at every period of time.
+                  </p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-box">
+                  <div class="icon">
+                    <!-- <i class="fas fa-paint-brush"></i> -->
+                    <!-- <i class="fas fa-file-video"></i> -->
+                    <i class="fas fa-film"></i>
+                  </div>
+                  <h3>Content Creation</h3>
+                  <p>
+                    Specially Curated Courses of Stock Market provinding premium content.
+                  </p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-box">
+                  <div class="icon">
+                    <i class="fas fa-atom"></i>
+                    <!-- <i class="fas fa-atom"></i> -->
+                    <!-- <i class="fas fa-code-branch"></i> -->
+                    <!-- <i class="fas fa-satellite"></i> -->
+                    <!-- <i class="fab fa-steam"></i> -->
+                    <!-- <i class="fas fa-bezier-curve"></i> -->
+                    <!-- <i class="fas fa-drafting-compass"></i> -->
+                  </div>
+                  <h3>Algo Trading</h3>
+                  <p>
+                    Working on a highly efficient program to perform trades backed by algorithms.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
     </div>
   </section>
   <!-- Kubera Moto Section End -->
 
   <!-- Who We Are Section Start -->
-  <section class="who-we-are section-padding counter-trigger" id="kubera-moto">
-    <div class="container">
+  <!-- <section class="who-we-are section-padding counter-trigger" id="kubera-moto"> -->
+  <!-- <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-8">
           <div class="section-title">
@@ -212,18 +313,18 @@
           </div>
         </div>
       </div>
-      <div class="row">
-        <!-- <div class="owl-carousel features-carousel"> -->
-        <div class="col-xl-12">
+      <div class="row"> -->
+  <!-- <div class="owl-carousel features-carousel"> -->
+  <!-- <div class="col-xl-12">
           <div class="who-we-are-content">
             <p>
               We are a group of Technical Analysts who are combined as a team to
               provide information and knowledge about Stock Market by updating
               daily analysis on Youtube.
-            </p>
+            </p> -->
 
-            <!-- Make this as a list  -->
-            <p>
+  <!-- Make this as a list  -->
+  <!-- <p>
               We also provide well analysed Calls for our Students and followers
               which Includes Options Buying and Selling, Cash Calls, Short-Term
               Calls, Long-Term Calls., etc.
@@ -233,63 +334,45 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </div> -->
+
+
+  <!-- <div id="counter">
+      <div class="counter-box">
+        <ul>
+          <li class="count col-sm-6">
+            <i class="fas fa-business-time"></i>
+            <h2 class="counter-title">Experience</h2>
+            <span class="number counter-value">10</span>
+          </li>
+          <li class="count col-sm-6">
+            <i class="fas fa-users"></i>
+            <h2 class="counter-title">Followers</h2>
+            <span class="number counter-value">10000</span>
+          </li>
+          <li class="count col-sm-6">
+            <i class="fab fa-youtube"></i>
+            <h2 class="counter-title">Subscribers</h2>
+            <span class="number counter-value">5000</span>
+          </li>
+          <li class="count col-sm-6">
+            <i class="fas fa-chart-line"></i>
+            <h2 class="counter-title">Accuracy</h2>
+            <span class="number counter-value">95</span>
+          </li>
+        </ul>
+      </div>
+    </div> -->
+  <!-- </section> -->
   <!-- Who We Are Section End -->
 
   <!-- Counter Up Start -->
   <!-- plus(+) code = '&#43;' -->
-  <div id="counter">
-    <div class="counter-box">
-      <!-- <div class="count">
-        <i class="fas fa-business-time"></i>
-        <h2 class="counter-title">Experience</h2>
-        <div class="number">10</div>
-      </div>
-      <div class="count">
-        <i class="fas fa-users"></i>
-        <h2 class="counter-title">Followers</h2>
-        <div class="number">10000</div>
-      </div>
-      <div class="count">
-        <i class="fab fa-youtube"></i>
-        <h2 class="counter-title">Subscribers</h2>
-        <div class="number">5000</div>
-      </div>
-      <div class="count">
-        <i class="fas fa-chart-line"></i>
-        <h2 class="counter-title">Accuracy</h2>
-        <div class="number">95<span></span></div>
-      </div> -->
-      <ul>
-        <li class="count col-sm-6" data-count="10">
-          <i class="fas fa-business-time"></i>
-          <h2 class="counter-title">Experience</h2>
-          <span class="number counter-value">10</span>
-        </li>
-        <li class="count col-sm-6" data-count="10000">
-          <i class="fas fa-users"></i>
-          <h2 class="counter-title">Followers</h2>
-          <span class="number counter-value">10000</span>
-        </li>
-        <li class="count col-sm-6" data-count="5000">
-          <i class="fab fa-youtube"></i>
-          <h2 class="counter-title">Subscribers</h2>
-          <span class="number counter-value">5000</span>
-        </li>
-        <li class="count col-sm-6" data-count="95">
-          <i class="fas fa-chart-line"></i>
-          <h2 class="counter-title">Accuracy</h2>
-          <span class="number counter-value">95</span>
-        </li>
-      </ul>
-    </div>
-  </div>
   <!-- Counter Up End -->
 
   <!-- Features Section Start -->
-  <section class="features section-padding" id="features" data-scroll-index="1">
-    <div class="container">
+  <!-- <section class="features section-padding" id="features" data-scroll-index="1"> -->
+  <!-- <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-8">
           <div class="section-title">
@@ -341,51 +424,73 @@
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </div> -->
+  <!-- </section> -->
   <!-- Features Section End -->
 
+  <!-- <hr class="custom-hr"> -->
+
   <!-- Fun Facts Section Start -->
-  <div class="fun-facts section-padding">
+  <div class="fun-facts section-padding" data-scroll-index="2">
     <div class="container">
       <div class="row">
-        <div class="col-lg-6 col-md-5 d-flex align-items-center justify-content-center">
-          <div class="fun-facts-img">
-            <img src="./assets/image/app-screenshots/2.png" alt="Fun Facts" />
+        <div class="col-lg-6 col-md-12 m-auto d-flex align-items-center justify-content-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="mb-3">
+                <div class="section-title">
+                  <h2 class="text-center">Who <span>We</span> Are</h2>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <!-- <div class="owl-carousel features-carousel"> -->
+
+              <div class="who-we-are-content col-xl-12 col-md-12 mx-2">
+                <p>
+                  <i class="fas fa-chess-queen"></i>We are a group of Technical Analysts who are combined as a team to
+                  provide information and knowledge about Stock Market by updating
+                  daily analysis on Youtube.
+                </p>
+
+                <!-- Make this as a list  -->
+                <p>
+                  <i class="fas fa-chess-queen"></i>We also provide well analysed Calls for our Students and followers
+                  which Includes Options Buying and Selling, Cash Calls, Short-Term
+                  Calls, Long-Term Calls., etc.
+                </p>
+
+                <p><i class="fas fa-chess-queen"></i>We also provide keen guidance to the doubts asked.</p>
+
+
+              </div>
+            </div>
           </div>
         </div>
-        <div class="col-lg-6 col-md-7">
-          <div class="section-title">
-            <h2>Fun <span>Facts</span></h2>
-          </div>
+        <div class="col-lg-6 col-md-12">
           <div class="fun-facts-text">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum
-              temporibus similique quae in officia, blanditiis recusandae
-              error voluptates tenetur, consectetur expedita fuga nisi alias!
-            </p>
             <div class="row">
-              <div class="col-sm-6">
+              <div class="col-lg-6 col-md-3 col-sm-6 p-1 m-auto">
                 <div class="fun-fact-item style-1">
-                  <h3>4000</h3>
+                  <h3 class="number">4000</h3>
                   <span>Downloads</span>
                 </div>
               </div>
-              <div class="col-sm-6">
+              <div class="col-lg-6 col-md-3 col-sm-6 p-1 m-auto">
                 <div class="fun-fact-item style-2">
-                  <h3>200</h3>
+                  <h3 class="number">200</h3>
                   <span>Likes</span>
                 </div>
               </div>
-              <div class="col-sm-6">
+              <div class="col-lg-6 col-md-3 col-sm-6 p-1 m-auto">
                 <div class="fun-fact-item style-3">
-                  <h3>500</h3>
+                  <h3 class="number">500</h3>
                   <span>5 Star Rating</span>
                 </div>
               </div>
-              <div class="col-sm-6">
+              <div class="col-lg-6 col-md-3 col-sm-6 p-1 m-auto">
                 <div class="fun-fact-item style-4">
-                  <h3>150</h3>
+                  <h3 class="number">150</h3>
                   <span>Awards</span>
                 </div>
               </div>
@@ -398,7 +503,7 @@
   <!-- Fun Facts Section End -->
 
   <!-- App Screenshots Section Start -->
-  <section class="app-screenshots section-padding" id="screenshots" data-scroll-index="2">
+  <section class="app-screenshots section-padding" id="screenshots" data-scroll-index="3">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-8">
@@ -431,7 +536,7 @@
   <!-- App Screenshots Section End -->
 
   <!-- App Download Section Start -->
-  <section class="app-download section-padding" data-scroll-index="3">
+  <section class="app-download section-padding">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-8">
@@ -652,11 +757,11 @@
             </div>
             <div class="pricing-body">
               <ul>
-                <li><i class="fas fa-check"></i> 5 GB Bandwidth</li>
-                <li><i class="fas fa-check"></i> Free Update</li>
-                <li><i class="fas fa-check"></i> High Regulation Printing</li>
-                <li><i class="fas fa-check"></i> Branding</li>
-                <li><i class="fas fa-check"></i> Another Great Features</li>
+                <li><i class="fas fa-check-circle"></i> 5 GB Bandwidth</li>
+                <li><i class="fas fa-check-circle"></i> Free Update</li>
+                <li><i class="fas fa-times-circle"></i> High Regulation Printing</li>
+                <li><i class="fas fa-times-circle"></i> Branding</li>
+                <li><i class="fas fa-times-circle"></i> Another Great Features</li>
               </ul>
             </div>
             <div class="pricing-footer">
@@ -671,7 +776,7 @@
             </div>
             <div class="pricing-price">
               <span class="currency">$</span>
-              <span class="price">149</span>
+              <span class="price">180</span>
               <span class="period">/Monthly</span>
             </div>
             <div class="pricing-body">
@@ -679,8 +784,8 @@
                 <li><i class="fas fa-check"></i> 5 GB Bandwidth</li>
                 <li><i class="fas fa-check"></i> Free Update</li>
                 <li><i class="fas fa-check"></i> High Regulation Printing</li>
-                <li><i class="fas fa-check"></i> Branding</li>
-                <li><i class="fas fa-check"></i> Another Great Features</li>
+                <li><i class="fas fa-times"></i> Branding</li>
+                <li><i class="fas fa-times-circle"></i> Another Great Features</li>
               </ul>
             </div>
             <div class="pricing-footer">
@@ -855,19 +960,20 @@
           <div class="contact-info">
             <h3>For Any Queries and Support</h3>
             <div class="contact-info-item">
-              <i class="fas fa-location-arrow"></i>
+              <i class="fas fa-address-card"></i>
               <h4>Company Location</h4>
-              <p>199 xyz galli, New Delhi</p>
+              <!-- add address link to open map -->
+              <a href="#">199 xyz galli, Hyderabad</a>
             </div>
             <div class="contact-info-item">
-              <i class="fas fa-envelope"></i>
+              <i class="fas fa-envelope-open-text"></i>
               <h4>Write to us at</h4>
-              <p>info@gmail.com</p>
+              <a href="mailto:kuberatrader@gmail.com">info@gmail.com</a>
             </div>
             <div class="contact-info-item">
-              <i class="fas fa-phone"></i>
+              <i class="fas fa-phone-alt"></i>
               <h4>Call us on</h4>
-              <p>91 9654 2931 **</p>
+              <a href="tel:987654321">91 9654 2931 **</a>
             </div>
           </div>
         </div>
