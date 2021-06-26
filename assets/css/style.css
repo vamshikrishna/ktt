@@ -335,6 +335,12 @@ ul {
   top: 1.5rem;
 }
 
+.contact-topbar-text::before {
+  content: "";
+  font-size: 14px;
+  padding: 0 10px;
+}
+
 header.header-topbar {
   background: var(--main-color-op);
   color: #fefefe;
@@ -356,6 +362,13 @@ header.header-topbar .wrapper-topbar {
 header.header-topbar .contact-topbar {
   display: flex;
   align-items: center;
+}
+
+header.header-topbar .contact-topbar .contact-topbar-link-1::after {
+  content: "987654321";
+}
+header.header-topbar .contact-topbar .contact-topbar-link-2::after {
+  content: "kuberatrader@gmail.com";
 }
 
 header.header-topbar .contact-topbar > div a {
@@ -1796,11 +1809,28 @@ header.header-topbar .contact-topbar > div a i {
 }
 
 @media (max-width: 576px) {
-  .padding {
+  /* .padding {
     top: 0;
+  } */
+  .contact-topbar-text::before {
+    content: "Contact: ";
   }
-  .header-topbar {
+  /* .header-topbar {
     display: none;
+  } */
+
+  header.header-topbar .contact-topbar .contact-topbar-link-1::after {
+    content: "";
+  }
+  header.header-topbar .contact-topbar .contact-topbar-link-2::after {
+    content: "";
+  }
+
+  header.header-topbar .contact-topbar > div a i {
+    margin-right: 0rem;
+  }
+  header.header-topbar .contact-topbar .divider {
+    padding: 0 0.6rem;
   }
 
   .home-text h1 {
